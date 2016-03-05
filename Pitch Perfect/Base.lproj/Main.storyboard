@@ -26,7 +26,7 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S5w-st-izM"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bb-v9-DYM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bb-v9-DYM">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <color key="textColor" red="0.14509803921568626" green="0.28235294117647058" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,16 +42,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="9bb-v9-DYM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="148" id="0Sr-hX-mff"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9bb-v9-DYM" secondAttribute="trailing" constant="148" id="AM7-ou-LRt"/>
                             <constraint firstItem="IjI-OT-ihS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BqK-su-vK2"/>
                             <constraint firstItem="JDO-aG-wwN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="155" id="LpL-pg-I55"/>
                             <constraint firstItem="IjI-OT-ihS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P3A-FV-GLt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9bb-v9-DYM" secondAttribute="trailing" constant="130" id="Ukm-Gn-KN2"/>
                             <constraint firstItem="9bb-v9-DYM" firstAttribute="top" secondItem="IjI-OT-ihS" secondAttribute="bottom" constant="8" id="ZpE-aF-oU0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JDO-aG-wwN" secondAttribute="bottom" constant="20" id="eGp-M7-O2v">
                                 <variation key="widthClass=compact" constant="50"/>
                             </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="JDO-aG-wwN" secondAttribute="trailing" constant="155" id="r0g-dJ-UTe"/>
+                            <constraint firstItem="9bb-v9-DYM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="130" id="xol-2G-Myi"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -60,14 +60,14 @@
                                 <exclude reference="JDO-aG-wwN"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="eGp-M7-O2v"/>
                                 <exclude reference="BqK-su-vK2"/>
                                 <exclude reference="P3A-FV-GLt"/>
+                                <exclude reference="Ukm-Gn-KN2"/>
+                                <exclude reference="ZpE-aF-oU0"/>
+                                <exclude reference="xol-2G-Myi"/>
                                 <exclude reference="LpL-pg-I55"/>
                                 <exclude reference="r0g-dJ-UTe"/>
-                                <exclude reference="0Sr-hX-mff"/>
-                                <exclude reference="AM7-ou-LRt"/>
-                                <exclude reference="ZpE-aF-oU0"/>
+                                <exclude reference="eGp-M7-O2v"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -77,14 +77,14 @@
                                 <include reference="JDO-aG-wwN"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="eGp-M7-O2v"/>
                                 <include reference="BqK-su-vK2"/>
                                 <include reference="P3A-FV-GLt"/>
+                                <include reference="Ukm-Gn-KN2"/>
+                                <include reference="ZpE-aF-oU0"/>
+                                <include reference="xol-2G-Myi"/>
                                 <include reference="LpL-pg-I55"/>
                                 <include reference="r0g-dJ-UTe"/>
-                                <include reference="0Sr-hX-mff"/>
-                                <include reference="AM7-ou-LRt"/>
-                                <include reference="ZpE-aF-oU0"/>
+                                <include reference="eGp-M7-O2v"/>
                             </mask>
                         </variation>
                     </view>
