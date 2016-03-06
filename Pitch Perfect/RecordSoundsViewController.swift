@@ -18,11 +18,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     var audioRecorder:AVAudioRecorder!
     var recordedAudio:RecordedAudio!
     var filePathUrl: NSURL!
-    
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-    }
 
     override func viewWillAppear(animated: Bool) {
         
@@ -30,12 +25,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         stopButton.hidden = true
         recordButton.enabled = true
     }
-    
-    override func didReceiveMemoryWarning() {
-        
-        super.didReceiveMemoryWarning()
-    }
-    
+ 
     @IBAction func recordAudio(sender: UIButton) {
         
         stopButton.hidden = false
@@ -69,20 +59,12 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
-        
-        var filePathUrl: NSURL!
-        var title: String!
-   
         if(flag){
-            
-            filePathUrl = recorder.url
-            title = recorder.url.lastPathComponent
-            
-            recordedAudio = RecordedAudio(filePathUrl: filePathUrl, title: title)
-            recordedAudio.filePathUrl = filePathUrl
-            recordedAudio.title = title
+            _ = RecordedAudio.init(filePathUrl: recorder.url, title: recorder.url.lastPathComponent!)
 
-            self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
+            recordedAudio = RecordedAudio(filePathUrl: recorder.url, title: recorder.url.lastPathComponent!)
+ 
+            performSegueWithIdentifier("stopRecording", sender: recordedAudio)
             
         }else{
             
